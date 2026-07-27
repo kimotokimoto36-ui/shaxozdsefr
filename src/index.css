@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #05020c;
+    color: #F1F5F9;
+    font-family: 'Poppins', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* ==========================================================
+   HYPNOTIC CONTINUOUS MOVING COSMIC PLASMA GRADIENT BG
+   ========================================================== */
+@keyframes cosmicPlasma {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.cosmic-plasma-bg {
+  background: linear-gradient(
+    -45deg,
+    #0a0320,
+    #3b0080,
+    #7000cc,
+    #e60073,
+    #00d8f0,
+    #100730,
+    #b800e6,
+    #00c4f0
+  );
+  background-size: 300% 300%;
+  animation: cosmicPlasma 16s ease-in-out infinite;
+  transform: translateZ(0);
+}
+
+/* ==========================================================
+   CYBER GLASSMORPHISM & PULSING OUTER NEON GLOW
+   ========================================================== */
+@keyframes neonPulseCard {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.35), 0 0 40px rgba(255, 0, 127, 0.2);
+    border-color: rgba(255, 255, 255, 0.20);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 0, 127, 0.5), 0 0 65px rgba(0, 240, 255, 0.35);
+    border-color: rgba(0, 240, 255, 0.5);
+  }
+}
+
+.cyber-glass-card {
+  background: rgba(10, 8, 25, 0.70);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 28px;
+  animation: neonPulseCard 6s ease-in-out infinite;
+  transform: translateZ(0);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* ==========================================================
+   BREATHING BUTTON ANIMATIONS & EXPLOSIVE NEON GLOW
+   ========================================================== */
+@keyframes buttonBreathing {
+  0%, 100% {
+    transform: scale(1) translateY(0px) translateZ(0);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.2), 0 4px 16px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+  50% {
+    transform: scale(1.012) translateY(-2px) translateZ(0);
+    box-shadow: 0 0 22px rgba(255, 0, 127, 0.38), 0 6px 20px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 0, 127, 0.45);
+  }
+}
+
+.breathing-btn {
+  animation: buttonBreathing 3.5s ease-in-out infinite;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+  will-change: transform;
+}
+
+.breathing-btn:hover {
+  animation: none;
+  transform: translateY(-4px) scale(1.02) translateZ(0) !important;
+  box-shadow: 0 0 25px #00f0ff, 0 0 45px #ff007f, 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(0, 240, 255, 0.9) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ==========================================================
+   LIGHTWEIGHT & CREATIVE TYPOGRAPHY EFFECTS
+   ========================================================== */
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.creative-title-text {
+  font-family: 'Syne', 'Sora', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #a5f3fc 35%, #f0abfc 70%, #fef08a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 6s ease infinite;
+  filter: drop-shadow(0 0 18px rgba(0, 240, 255, 0.35));
+}
+
+.creative-number-text {
+  font-family: 'Sora', 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #fef08a 0%, #fde047 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.45));
+}
+
+.creative-score-num {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ==========================================================
+   CYBER AVATAR HALO & ORBITING RING
+   ========================================================== */
+@keyframes haloPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px #00f0ff, 0 0 50px #ff007f, inset 0 0 15px #8b00ff;
+    transform: rotate(0deg);
+  }
+  50% {
+    box-shadow: 0 0 45px #ff007f, 0 0 85px #00f0ff, inset 0 0 25px #ff007f;
+    transform: rotate(180deg);
+  }
+}
+
+.avatar-cyber-halo {
+  position: relative;
+}
+
+.avatar-cyber-halo::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, #00f0ff, #ff007f, #8b00ff, #00f0ff);
+  animation: haloPulse 5s infinite linear;
+  z-index: 0;
+  filter: blur(8px);
+  opacity: 0.85;
+}
+
+/* Background Mesh Animations */
+@keyframes floatBg1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  50% { transform: translate(40px, -50px) scale(1.2) rotate(180deg); }
+}
+
+@keyframes floatBg2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+  50% { transform: translate(-40px, 50px) scale(1.25) rotate(-180deg); }
+}
+
+.bg-blob-1 {
+  animation: floatBg1 12s infinite ease-in-out;
+}
+
+.bg-blob-2 {
+  animation: floatBg2 15s infinite ease-in-out;
+}
+
+/* Fade in entrance animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05020c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 127, 0.6);
+}
+
+
